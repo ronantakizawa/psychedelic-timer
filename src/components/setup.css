@@ -1,0 +1,26 @@
+.fade-in{
+    transition: opacity 1s ease;
+}
+
+.fade-out{
+
+    opacity:0;
+    transition: opacity 1s ease;
+}
+
+.btn btn-primary{
+    display:"grid";
+    padding:"10px";
+    place-items:"center";
+    text-align:"center";
+    font-size:"30px";
+    font-weight: "bold";
+    margin-Left:"600px";
+    color:"white";
+    background-color: "rgb(147,112,219)";
+    border-color: "rgb(147,112,219)";
+}
+.button:hover{
+    background-color: "rgb(247,112,219)";
+   
+}
