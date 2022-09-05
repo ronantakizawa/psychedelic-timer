@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/psychedelic-timer/static/css/main.9879ec32.css",
-    "main.js": "/psychedelic-timer/static/js/main.e9d80fba.js",
+    "main.js": "/psychedelic-timer/static/js/main.167b01de.js",
     "static/js/787.6a958f81.chunk.js": "/psychedelic-timer/static/js/787.6a958f81.chunk.js",
     "static/media/img2.png": "/psychedelic-timer/static/media/img2.61e51d1263504571d438.png",
     "static/media/img3.png": "/psychedelic-timer/static/media/img3.a2028d7c1e32881960d4.png",
     "static/media/img1.png": "/psychedelic-timer/static/media/img1.f0402a03a0b544c21600.png",
     "index.html": "/psychedelic-timer/index.html",
     "main.9879ec32.css.map": "/psychedelic-timer/static/css/main.9879ec32.css.map",
-    "main.e9d80fba.js.map": "/psychedelic-timer/static/js/main.e9d80fba.js.map",
+    "main.167b01de.js.map": "/psychedelic-timer/static/js/main.167b01de.js.map",
     "787.6a958f81.chunk.js.map": "/psychedelic-timer/static/js/787.6a958f81.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9879ec32.css",
-    "static/js/main.e9d80fba.js"
+    "static/js/main.167b01de.js"
   ]
 }
