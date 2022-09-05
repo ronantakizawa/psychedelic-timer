@@ -1,6 +1,5 @@
 /* eslint-disable no-undef */
 import React from "react";
-import ScaleText from "react-scale-text";
 import Start from "./components/start";
 import Shrooms from "./components/shrooms";
 import ShroomsTimer from "./components/shroomstimer";
