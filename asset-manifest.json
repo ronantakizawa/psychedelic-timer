@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/ronantakizawa/psychedelic-timer/static/css/main.9879ec32.css",
+    "main.js": "/ronantakizawa/psychedelic-timer/static/js/main.0c29543a.js",
+    "static/js/787.6a958f81.chunk.js": "/ronantakizawa/psychedelic-timer/static/js/787.6a958f81.chunk.js",
+    "static/media/img2.png": "/ronantakizawa/psychedelic-timer/static/media/img2.61e51d1263504571d438.png",
+    "static/media/img3.png": "/ronantakizawa/psychedelic-timer/static/media/img3.a2028d7c1e32881960d4.png",
+    "static/media/img1.png": "/ronantakizawa/psychedelic-timer/static/media/img1.f0402a03a0b544c21600.png",
+    "index.html": "/ronantakizawa/psychedelic-timer/index.html",
+    "main.9879ec32.css.map": "/ronantakizawa/psychedelic-timer/static/css/main.9879ec32.css.map",
+    "main.0c29543a.js.map": "/ronantakizawa/psychedelic-timer/static/js/main.0c29543a.js.map",
+    "787.6a958f81.chunk.js.map": "/ronantakizawa/psychedelic-timer/static/js/787.6a958f81.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9879ec32.css",
+    "static/js/main.0c29543a.js"
+  ]
+}
