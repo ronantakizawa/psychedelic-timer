@@ -5,6 +5,10 @@ Link: https://ronantakizawa.github.io/psychedelic-timer/
 
 
 
+https://user-images.githubusercontent.com/71115970/188511930-6623d169-b48c-4a3f-97f8-c30580415c5a.mov
+
+
+
 
 
 # Getting Started with Create React App
