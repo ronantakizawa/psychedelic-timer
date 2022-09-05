@@ -2,10 +2,6 @@ import React, { useState, useEffect} from 'react';
 import "./setup.css";
 
 
-const body = {
-
-    homepageDisplay: false
-}
 
 
 const buttons = {
@@ -14,8 +10,7 @@ const buttons = {
     alignItems:"center",
     position:"relative",
     fontSize: "20px",
-    marginLeft:"60px",
-    opacity: "1",
+    marginLeft:"300px",
     transition: "1s opacity"
 
     
@@ -45,6 +40,11 @@ const buttons = {
 
 const Fader = (props) => {
 
+    const body = {
+
+        homepageDisplay: props.data
+    }    
+
 
     const [fadeProp, setFadeProp] = useState({
         fade: 'fade-out',
@@ -67,24 +67,23 @@ const Fader = (props) => {
     }, [fadeProp])
 
 
-    const onLSD = () =>
+    const onLSD = (event) =>
     {
-        body.homepageDisplay = true;
+        props.parentCallback("LSD");
+        event.preventDefault();
     }
 
-    const handleShrooms = () =>
+    const handleShrooms = (event) =>
     {
-        body.homepageDisplay = true;
+        props.parentCallback("Shrooms");
+        event.preventDefault();
     }
 
-    const handleWeed = () =>
-    {
-        body.homepageDisplay = true;
-    }
 
-    const handleDMT = () =>
+    const handleDMT = (event) =>
     {
-        body.homepageDisplay = true;
+        props.parentCallback("DMT");
+        event.preventDefault();
     }
 
         return (
@@ -97,16 +96,13 @@ const Fader = (props) => {
                 </div>
     
                 <div style={buttons}>
-                    <button className="btn btn-light" style={button} onClick={()=>onLSD()}>
+                    <button className="btn btn-light" style={button} onClick={onLSD}>
                         LSD &#127752;
                     </button> 
-                    <button className="btn btn-light" style={button} onClick={()=>handleShrooms()}>
+                    <button className="btn btn-light" style={button} onClick={handleShrooms}>
                         Psilocybin&#127812;
                     </button> 
-                    <button className="btn btn-light" style={button} onClick={()=>handleWeed()}>
-                        Marijuana&#127807;
-                    </button> 
-                    <button className="btn btn-light" style={button} onClick={()=>handleDMT()}>
+                    <button className="btn btn-light" style={button} onClick={handleDMT}>
                         DMT&#128125;
                     </button>
                     

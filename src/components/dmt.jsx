@@ -1,10 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
-import Timer1 from "./timer1";
-import Timer2 from "./timer2";
-import Image1 from "/Users/ronantakizawa/Documents/Personal CS projects/drug timer/drug-timer/src/img1.png";
-import Shroom from "./shroom";
-
+import Timer1 from "./dmttimer1";
+import Timer2 from "./dmttimer2";
+import Image3 from "/Users/ronantakizawa/Documents/Personal CS projects/drug timer/drug-timer/src/img3.png";
 
 const Timer = (props) => {
 
@@ -45,7 +43,7 @@ const Timer = (props) => {
   }, []);
 
   const body = {
-    homepageDisplay:props.data2
+    homepageDisplay:props.dataDMT
  }
 
 
@@ -78,7 +76,7 @@ const Timer = (props) => {
 	    <>
         <div style = {body} data-testid="fader" className={fadeProp.fade} >
         <div style={style}>
-            <img src={Image1} width="900" height="400" alt="Shroom" style={pic}></img>
+            <img src={Image3} width="900" height="400" alt="Shroom" style={pic}></img>
         </div>
         <div style={style}>
             <div>

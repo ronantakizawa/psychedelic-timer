@@ -1,10 +1,12 @@
 /* eslint-disable no-undef */
-import React,{ useState} from "react";
-import Buttons from "./components/fader";
-import Shroom from "./components/shroom";
-import Timer from "./components/timer";
-import Fader from "./components/fader";
-import Chart from "./components/chart"
+import React from "react";
+import ScaleText from "react-scale-text";
+import Start from "./components/start";
+import Shrooms from "./components/shrooms";
+import ShroomsTimer from "./components/shroomstimer";
+import LSD from "./components/lsd";
+import LSDTimer from "./components/lsdtimer";
+import DMT from "./components/dmt";
 
 const Home= () => {
 
@@ -21,7 +23,7 @@ const Home= () => {
     }
     const newPage = () =>{
 
-        var link= "https://tripsafe.org/shrooms/";
+        var link= "https://tripsafe.org";
         window.open(link,"blank");
      }
 
@@ -55,29 +57,88 @@ const Home= () => {
 
      const newPage3 = () =>{
 
-        var link= "https://www.psycom.net/psilocybin-magic-mushrooms";
+        var link= "https://psychable.com/psychedelics/frequently-asked-questions-about-psychedelics/";
         window.open(link,"blank");
      }
 
      //Controls whether the shroom window will pop up
     const [showResults, setShowResults] = React.useState(true);
 
-    const [showResults2, setShowResults2] = React.useState(false);
+    const [showResultsLSD, setShowResultsLSD] = React.useState(false);
+
+    const [showResultsShrooms, setShowResultsShrooms] = React.useState(false);
+
+    const [showResultsDMT, setShowResultsDMT] = React.useState(false);
+
+    
+    
+    
+    const [showResultsLSDTimer, setShowResultsLSDTimer] = React.useState(false);
+
+    const [showResultsShroomsTimer, setShowResultsShroomsTimer] = React.useState(false);
+
+
     
     //Controls whether fade animation will start
     var [data,setData] = React.useState(false);
 
-    var [data2,setData2] = React.useState(true);
+    var [dataLSD,setDataLSD] = React.useState(true);
+
+    var [dataShrooms,setDataShrooms] = React.useState(true);
+
+
+
+
+    var [dataLSDTimer,setDataLSDTimer] = React.useState(true);
+
+    var [dataShroomsTimer,setDataShroomsTimer] = React.useState(true);
+
 
 
     //Fade Animation 
     const handleCallback = (childData) =>{
-      console.log(childData);
-        setData(true);
-        setTimeout(() => setShowResults(false), 2000);
-        setTimeout(() => setShowResults2(true), 2000);
-        setData2(false);
+        if(childData==="LSD")
+        {
+         setData(true);
+         setTimeout(() => setShowResults(false), 2000);
+         setTimeout(() => setShowResultsLSD(true), 2000);
+         setDataLSD(false);
+        }
+        else if(childData==="Shrooms")
+        {
+         setData(true);
+         setTimeout(() => setShowResults(false), 2000);
+         setTimeout(() => setShowResultsShrooms(true), 2000);
+         setDataShrooms(false);
+        }
+        else if(childData==="DMT")
+        {
+         setData(true);
+         setTimeout(() => setShowResults(false), 2000);
+         setTimeout(() => setShowResultsDMT(true), 2000);
+         setDataDMT(false);
+        }
     }
+    const handleCallback2 = (childData) =>{
+
+      console.log(childData);
+
+      if(childData==="LSD")
+        {
+         setDataLSD(true);
+         setTimeout(() => setShowResultsLSD(false), 2000);
+         setTimeout(() => setShowResultsLSDTimer(true), 2000);
+         setDataLSDTimer(false);
+        }
+        else if(childData==="Shrooms")
+        {
+         setDataShrooms(true);
+         setTimeout(() => setShowResultsShrooms(false), 2000);
+         setTimeout(() => setShowResultsShroomsTimer(true), 2000);
+         setDataShroomsTimer(false);
+         
+        }
+  }
 
         const banner = {
             backgroundColor: "rgb(147,112,219)",
@@ -189,17 +250,33 @@ const Home= () => {
 
                 </nav>
                 <br></br>
-                <p style={title}>🕑 ShroomTimer 🕑</p>
-                <p style={subtitle}>Ensuring Safe Usage of Psilocybin Mushrooms</p>
+                <p style={title}>🕑 Psychedelic Timer 🕑</p>
+                <p style={subtitle}>Ensuring Safe Usage of Psychoactive Substances</p>
                 <br></br>
             </div>
-            { showResults ? <Shroom
+            { showResults ? <Start
                 parentCallback = {handleCallback}
                 data = {data}
                 /> : null}
-            { showResults2 ? <Timer
-                data2={data2}
+            { showResultsLSD ? <LSD
+                parentCallback = {handleCallback2}
+                dataLSD = {dataLSD}
                 /> : null}
+            { showResultsShrooms ? <Shrooms
+                parentCallback = {handleCallback2}
+                dataShrooms = {dataShrooms}
+                /> : null}
+            { showResultsDMT ? <DMT
+                parentCallback = {handleCallback}
+                dataDMT = {dataDMT}
+                /> : null}
+            { showResultsLSDTimer ? <LSDTimer
+                dataLSDTimer = {dataLSDTimer}
+                /> : null}
+            { showResultsShroomsTimer ? <ShroomsTimer
+                dataShroomsTimer = {dataShroomsTimer}
+                /> : null}
+            
             </>
         );
       }

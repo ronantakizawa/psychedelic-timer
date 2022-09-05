@@ -39,7 +39,7 @@ const onTrigger = (event) =>
  var text = value.options[value.selectedIndex].text;
  if(text!="Select Dosage")
  {
-    props.parentCallback(text);
+    props.parentCallback("Shrooms");
     event.preventDefault();
  }
 }
@@ -82,7 +82,7 @@ const onTrigger = (event) =>
         placeItems:"center",
         placeItems:"center",
         textAlign:"center",
-        homepageDisplay:props.data
+        homepageDisplay:props.dataShrooms
      }
 
      const label = {
@@ -95,7 +95,7 @@ const onTrigger = (event) =>
         return (
             <>
             <div style = {body} data-testid="fader" className={fadeProp.fade}> 
-            <h1 style={h3}>&#127812;Psilocybin&#127812;</h1>
+            <h1 style={h3}>&#127812; Psilocybin &#127812;</h1>
             <div className="form-group" style={form}>
             
             <h5 style={label}>Dosage</h5>

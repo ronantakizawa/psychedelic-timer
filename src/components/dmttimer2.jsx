@@ -4,8 +4,7 @@ import React, { useState, useRef, useEffect } from 'react';
 
 
 const Timer2 = (props) => {
-  const { initMinute = 0, initSeconds = 0, initHour = 0} = props
-  const [hours,setHours] = React.useState(initHour);
+  const { initMinute = 0, initSeconds = 0} = props
   const [minutes, setMinutes] = React.useState(initMinute);
   const [seconds, setSeconds] = React.useState(initSeconds);
 
@@ -15,31 +14,27 @@ const Timer2 = (props) => {
         if (seconds === 59) {
           setSeconds(0)
           setMinutes(minutes+1)
-      if (minutes === 59) {
-          setHours(hours+1)
-          setMinutes(0)
       }
-      }
-        if(hours===0){
+        if(minutes===0){
             onTrigger1();
         }
-        else if(hours===1){
-          onTrigger2();
+        if(minutes===0 && seconds===30){
+            onTrigger2();
         }
-        else if(hours===2){
-            onTrigger3();
+        if(minutes===0 && seconds===45){
+          onTrigger3();
         }
-        else if(hours===3){
-          onTrigger4();
-        }
-        else if(hours===4){
+        if(minutes===1){
           onTrigger5();
         }
-        else if(hours===5){
-            onTrigger6();
+        if(minutes===1 && seconds===30){
+            onTrigger4();
         }
-        else if(hours===6){
-          onTrigger7();
+        if(minutes===8){
+          onTrigger6();
+        }
+        if(minutes===15){
+            onTrigger7();
         }
 
     }, 1000)
@@ -60,7 +55,7 @@ const Timer2 = (props) => {
 const array1= ["Anticipation, Excitement","Chills, Tingling",
 "Mild Hallucination, Increased Heartrate","Vivid Hallucinations, Intensified Emotions",
 "Out-of-body experience, Fluctuating Body Temperature","Mild Hallucination, Sweating",
-"Regular Heartrate, Relaxation"];
+"Regular Heartrate"];
 
     const onTrigger1 = (event) =>
     {
@@ -100,7 +95,7 @@ const array1= ["Anticipation, Excitement","Chills, Tingling",
   return (
 	    < >
             <div>
-            <h1 style={timer2}>{hours < 10 ? `0${hours}` : hours}:{minutes < 10 ? `0${minutes}` : minutes}:{seconds < 10 ? `0${seconds}` : seconds}</h1>
+            <h1 style={timer2}>{minutes < 10 ? `0${minutes}` : minutes}:{seconds < 10 ? `0${seconds}` : seconds}</h1>
             </div>
         </>
   )
