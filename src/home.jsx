@@ -60,6 +60,23 @@ const Home= () => {
         window.open(link,"blank");
      }
 
+     //Source code hover
+
+     const [showHover4, setShowHover4] = React.useState("none");
+
+     const hover4 = () =>{
+        setShowHover4("underline");
+     }
+
+     const leave4 = () =>{
+        setShowHover4("none");
+     }
+     const newPage4 = () =>{
+
+      var link= "https://github.com/ronantakizawa/psychedelic-timer";
+      window.open(link,"blank");
+   }
+
      //Controls whether the shroom window will pop up
     const [showResults, setShowResults] = React.useState(true);
 
@@ -198,6 +215,16 @@ const Home= () => {
             borderColor: "rgb(147,112,219)"
             
          }
+         const button4 = {
+
+            textAlign:"center",
+            fontWeight: "bold",
+            color:"white",
+            backgroundColor: "rgb(147,112,219)",
+            textDecoration:showHover4,
+            borderColor: "rgb(147,112,219)"
+            
+         }
 
          const nav = 
          {
@@ -242,6 +269,15 @@ const Home= () => {
                 
                 >
                         Emergency Contacts
+            </button>
+            <button className="btn btn-primary" 
+                    style={button4}    
+                    onMouseEnter={hover4}
+                    onMouseLeave={leave4}  
+                    onClick = {newPage4}
+                
+                >
+                        Source Code
             </button>
 
 
