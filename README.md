@@ -1,4 +1,4 @@
-This web application was created using React.js and bootstrap.css. React hooks such as useState and useEffect were also used. This web application is a guide to a safe psychedelic trip for LSD, Psilocybin, and DMT. This web application has a timer that notifies expected symptoms during the trip, as well as helpful visuals and safety resources for emergencies.
+This web application was created using React.js and bootstrap.css. React hooks such as useState and useEffect were also used. This web application is an educational platform for drug education and safe drug usage. This web application has a timer that notifies expected symptoms during substance usage, as well as helpful visuals and safety resources for emergencies.
 Link: https://ronantakizawa.github.io/psychedelic-timer/
 
 
