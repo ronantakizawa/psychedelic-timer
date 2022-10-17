@@ -170,7 +170,9 @@ const Home= () => {
             fontSize:"60px",
             fontWeight: "bold",
             position:"relative",
-            bottom:"30px"
+            bottom:"30px",
+            overflow:"hidden",
+            whiteSpace:"nowrap"
 
          }
 
@@ -181,7 +183,9 @@ const Home= () => {
             textAlign:"center",
             fontSize:"25px",
             position:"relative",
-            bottom:"40px"
+            bottom:"40px",
+            overflow:"hidden",
+            whiteSpace:"nowrap"
          }
 
 

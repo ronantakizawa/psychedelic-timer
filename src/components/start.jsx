@@ -34,7 +34,9 @@ const buttons = {
     fontSize:"50px",
     fontWeight: "bold",
     opacity: "1",
-    transition: "1s opacity"
+    transition: "1s opacity",
+    overflow:"hidden",
+    whiteSpace:"nowrap"
 
  };
 
